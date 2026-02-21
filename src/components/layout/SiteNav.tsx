@@ -20,15 +20,19 @@ const calculatorLinks = [
     label: 'Back to Work Calculator',
     description: 'Is returning to work financially worth it?',
   },
+  {
+    href: '/income-sensitivity-calculator',
+    label: 'Income Sensitivity Calculator',
+    description: 'See how costs change at every income level from $40k–$600k',
+  },
 ];
 
 const guideLinks = [
   { href: '/guides/how-ccs-works', label: 'How the CCS Works' },
-  { href: '/guides/activity-test-explained', label: 'Activity Test Explained' },
   { href: '/guides/ccs-income-thresholds', label: 'CCS Income Thresholds' },
-  { href: '/guides/back-to-work-childcare', label: 'Going Back to Work' },
-  { href: '/guides/childcare-types-compared', label: 'Types of Childcare Compared' },
   { href: '/guides/3-day-guarantee', label: 'The 3-Day Guarantee (2026)' },
+  { href: '/guides/back-to-work-childcare', label: 'Going Back to Work' },
+  { href: '/guides/childcare-costs-by-state', label: 'Childcare Costs by State' },
 ];
 
 // ──────────────────────────────────────────────────────────────────────────────

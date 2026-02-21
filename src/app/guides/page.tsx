@@ -110,7 +110,7 @@ const GUIDES: Guide[] = [
       'Average daily fees by state and territory for centre-based day care, family day care, and OSHC — plus why costs vary by location.',
     readingTime: 6,
     category: 'costs',
-    live: false,
+    live: true,
   },
   {
     href: '/guides/government-vs-private-childcare',
