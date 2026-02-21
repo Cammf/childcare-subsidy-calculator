@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
+import { ThemeProvider } from "next-themes";
 import "./globals.css";
 import SiteNav from "@/components/layout/SiteNav";
 import SiteFooter from "@/components/layout/SiteFooter";
@@ -82,16 +83,21 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en-AU" className={inter.className}>
+    // suppressHydrationWarning: next-themes sets class="dark" server-side
+    // but can only know the correct theme client-side (localStorage/OS pref).
+    // This suppresses the React mismatch warning on the html element only.
+    <html lang="en-AU" className={inter.className} suppressHydrationWarning>
       <body className="antialiased bg-background text-text-main flex flex-col min-h-screen">
-        <GoogleAnalytics />
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(siteJsonLd) }}
-        />
-        <SiteNav />
-        <div className="flex-1">{children}</div>
-        <SiteFooter />
+        <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
+          <GoogleAnalytics />
+          <script
+            type="application/ld+json"
+            dangerouslySetInnerHTML={{ __html: JSON.stringify(siteJsonLd) }}
+          />
+          <SiteNav />
+          <div className="flex-1">{children}</div>
+          <SiteFooter />
+        </ThemeProvider>
       </body>
     </html>
   );

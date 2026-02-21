@@ -72,7 +72,7 @@ export default function ChildcareSubsidyCalculatorPage({ searchParams }: PagePro
 
       <main className="min-h-screen bg-gray-50">
         {/* Page header */}
-        <div className="bg-white border-b border-border">
+        <div className="bg-card border-b border-border">
           <div className="max-w-4xl mx-auto px-4 py-8 sm:px-6 lg:px-8">
             <h1 className="text-2xl font-bold text-text-main sm:text-3xl">
               Child Care Subsidy Calculator

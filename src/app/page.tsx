@@ -148,7 +148,7 @@ export default function HomePage() {
           <div className="flex flex-col sm:flex-row items-center justify-center gap-3">
             <Link
               href="/childcare-subsidy-calculator"
-              className="w-full sm:w-auto inline-block bg-white text-primary font-bold px-8 py-4 rounded-lg text-base hover:bg-teal-50 transition-colors focus:outline-none focus:ring-4 focus:ring-white/40 min-h-[52px]"
+              className="w-full sm:w-auto inline-block bg-white dark:bg-slate-100 text-primary font-bold px-8 py-4 rounded-lg text-base hover:bg-teal-50 transition-colors focus:outline-none focus:ring-4 focus:ring-white/40 min-h-[52px]"
             >
               Calculate my CCS →
             </Link>
@@ -167,7 +167,7 @@ export default function HomePage() {
       </section>
 
       {/* ── TRUST BAR ───────────────────────────────────────────────────────── */}
-      <section className="bg-white border-b border-border" aria-label="Trust indicators">
+      <section className="bg-card border-b border-border" aria-label="Trust indicators">
         <div className="max-w-4xl mx-auto px-4 py-5">
           <ul className="flex flex-wrap justify-center gap-x-8 gap-y-2">
             {trustItems.map((item) => (
@@ -225,7 +225,7 @@ export default function HomePage() {
 
       {/* ── VALUE PROPS ─────────────────────────────────────────────────────── */}
       <section
-        className="bg-white border-y border-border"
+        className="bg-card border-y border-border"
         aria-labelledby="value-props-heading"
       >
         <div className="max-w-4xl mx-auto px-4 py-14">
@@ -304,7 +304,7 @@ export default function HomePage() {
           <div className="flex flex-col sm:flex-row items-center justify-center gap-3">
             <Link
               href="/childcare-subsidy-calculator"
-              className="w-full sm:w-auto inline-block bg-white text-primary font-bold px-8 py-4 rounded-lg text-base hover:bg-teal-50 transition-colors min-h-[52px]"
+              className="w-full sm:w-auto inline-block bg-white dark:bg-slate-100 text-primary font-bold px-8 py-4 rounded-lg text-base hover:bg-teal-50 transition-colors min-h-[52px]"
             >
               Start the CCS Calculator →
             </Link>

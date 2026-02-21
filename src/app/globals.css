@@ -1,3 +1,27 @@
+/* =============================================================================
+   CSS CUSTOM PROPERTIES — light and dark theme tokens
+   next-themes adds class="dark" to <html> when dark mode is active.
+   Tailwind semantic color tokens (background, card, text-main, muted, border)
+   point to these variables, so every element using those tokens switches
+   automatically without per-element dark: overrides.
+   ============================================================================= */
+
+:root {
+  --color-background: #F7F8FA;
+  --color-card:       #FFFFFF;
+  --color-text-main:  #1A202C;
+  --color-muted:      #4A5568;
+  --color-border:     #E2E8F0;
+}
+
+.dark {
+  --color-background: #0F172A;  /* slate-950 */
+  --color-card:       #1E293B;  /* slate-800 */
+  --color-text-main:  #F1F5F9;  /* slate-100 */
+  --color-muted:      #94A3B8;  /* slate-400 */
+  --color-border:     #334155;  /* slate-700 */
+}
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -7,8 +31,9 @@
     font-family: 'Inter', sans-serif;
     font-size: 17px;
     line-height: 1.7;
-    color: #1A202C;
-    background-color: #F7F8FA;
+    /* Use CSS variables so color switches with the .dark class */
+    color: var(--color-text-main);
+    background-color: var(--color-background);
   }
 
   h1 {
@@ -38,15 +63,16 @@
 
 @layer components {
   .btn-primary {
-    @apply bg-primary text-white font-semibold px-6 py-3 rounded-lg min-h-[48px] min-w-[48px] hover:bg-cyan-800 transition-colors focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2;
+    @apply bg-primary text-white font-semibold px-6 py-3 rounded-lg min-h-[48px] min-w-[48px] hover:bg-cyan-800 transition-colors focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2 dark:focus:ring-offset-slate-900;
   }
 
+  /* bg-card → driven by CSS variable, auto-switches in dark mode */
   .card {
-    @apply bg-white rounded-lg p-6 shadow-card border border-border;
+    @apply bg-card rounded-lg p-6 shadow-card border border-border;
   }
 
   .input-field {
-    @apply w-full border border-border rounded-lg px-4 text-base min-h-[48px] focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent;
+    @apply w-full border border-border rounded-lg px-4 text-base min-h-[48px] focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent bg-card text-text-main;
     font-size: 17px;
   }
 
@@ -56,7 +82,7 @@
   }
 
   .btn-secondary {
-    @apply bg-white text-primary font-semibold px-6 py-3 rounded-lg min-h-[48px] min-w-[48px] border border-primary hover:bg-teal-50 transition-colors focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2;
+    @apply bg-card text-primary font-semibold px-6 py-3 rounded-lg min-h-[48px] min-w-[48px] border border-primary hover:bg-teal-50 dark:hover:bg-teal-950 transition-colors focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2 dark:focus:ring-offset-slate-900;
   }
 }
 
@@ -65,7 +91,7 @@
    Applied to .prose-guide wrapper inside GuideLayout
    ============================================================================= */
 .prose-guide {
-  color: #1A202C;
+  color: var(--color-text-main);
   font-size: 17px;
   line-height: 1.8;
 }
@@ -74,18 +100,18 @@
   font-size: 24px;
   font-weight: 600;
   line-height: 1.3;
-  color: #1A202C;
+  color: var(--color-text-main);
   margin-top: 2.5rem;
   margin-bottom: 1rem;
   padding-bottom: 0.5rem;
-  border-bottom: 2px solid #E2E8F0;
+  border-bottom: 2px solid var(--color-border);
 }
 
 .prose-guide h3 {
   font-size: 20px;
   font-weight: 600;
   line-height: 1.4;
-  color: #1A202C;
+  color: var(--color-text-main);
   margin-top: 2rem;
   margin-bottom: 0.75rem;
 }
@@ -114,7 +140,7 @@
 
 .prose-guide strong {
   font-weight: 600;
-  color: #1A202C;
+  color: var(--color-text-main);
 }
 
 .prose-guide a {
@@ -136,6 +162,10 @@
   margin: 1.5rem 0;
 }
 
+.dark .prose-guide .callout {
+  background: #164e63;  /* cyan-900 */
+}
+
 /* Warning callout */
 .prose-guide .callout-warning {
   background: #FFFBEB;
@@ -145,6 +175,10 @@
   margin: 1.5rem 0;
 }
 
+.dark .prose-guide .callout-warning {
+  background: #451a03;  /* amber-950 */
+}
+
 /* Success / tip callout */
 .prose-guide .callout-tip {
   background: #F0FFF4;
@@ -152,6 +186,10 @@
   border-radius: 0 8px 8px 0;
   padding: 1rem 1.25rem;
   margin: 1.5rem 0;
+}
+
+.dark .prose-guide .callout-tip {
+  background: #052e16;  /* green-950 */
 }
 
 /* Data/worked example table */
@@ -172,12 +210,12 @@
 
 .prose-guide td {
   padding: 0.625rem 1rem;
-  border-bottom: 1px solid #E2E8F0;
+  border-bottom: 1px solid var(--color-border);
   vertical-align: top;
 }
 
 .prose-guide tr:nth-child(even) td {
-  background: #F7F8FA;
+  background: var(--color-background);
 }
 
 .prose-guide tr:last-child td {

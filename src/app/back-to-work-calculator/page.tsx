@@ -131,7 +131,7 @@ export default function BackToWorkCalculatorPage({ searchParams }: PageProps) {
 
       <main className="min-h-screen bg-gray-50">
         {/* Page header */}
-        <div className="bg-white border-b border-border">
+        <div className="bg-card border-b border-border">
           <div className="max-w-4xl mx-auto px-4 py-8 sm:px-6 lg:px-8">
             <p className="text-xs font-medium text-primary mb-1">
               FY 2025–26 rates · Takes about 3 minutes

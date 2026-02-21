@@ -60,7 +60,7 @@ function ReviewSection({
   children: ReactNode;
 }) {
   return (
-    <div className="rounded-xl border border-border bg-white p-5">
+    <div className="rounded-xl border border-border bg-card p-5">
       <div className="flex items-center justify-between mb-3">
         <h3 className="text-sm font-semibold text-text-main">{title}</h3>
         <button

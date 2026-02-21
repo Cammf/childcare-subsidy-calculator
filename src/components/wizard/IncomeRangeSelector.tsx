@@ -196,7 +196,7 @@ export default function IncomeRangeSelector({
                 onChange={handleExactInputChange}
                 placeholder="e.g. 95000"
                 className={[
-                  'w-full pl-7 pr-3 py-2.5 rounded-lg border-2 bg-white text-text-main',
+                  'w-full pl-7 pr-3 py-2.5 rounded-lg border-2 bg-card text-text-main',
                   'border-border focus:border-primary focus:ring-2 focus:ring-primary/20',
                   'focus:outline-none transition-colors duration-150',
                 ].join(' ')}

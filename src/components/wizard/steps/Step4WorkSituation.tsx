@@ -126,7 +126,7 @@ export default function Step4WorkSituation() {
               className={[
                 'w-full flex items-start gap-4 p-5 rounded-xl border-2 text-left',
                 'transition-all duration-150',
-                'border-primary/30 bg-white hover:border-primary hover:bg-teal-50',
+                'border-primary/30 bg-card hover:border-primary hover:bg-teal-50',
               ].join(' ')}
             >
               <div className="flex-shrink-0 mt-0.5 w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center" aria-hidden="true">
@@ -152,7 +152,7 @@ export default function Step4WorkSituation() {
               className={[
                 'w-full flex items-start gap-4 p-5 rounded-xl border-2 text-left',
                 'transition-all duration-150',
-                'border-border bg-white hover:border-primary/40 hover:bg-gray-50',
+                'border-border bg-card hover:border-primary/40 hover:bg-gray-50',
               ].join(' ')}
             >
               <div className="flex-shrink-0 mt-0.5 w-10 h-10 rounded-full bg-gray-100 flex items-center justify-center" aria-hidden="true">
@@ -223,7 +223,7 @@ export default function Step4WorkSituation() {
                   onChange={handleCurrentIncome}
                   placeholder="0"
                   className={[
-                    'w-full pl-7 pr-14 py-2.5 rounded-lg border-2 bg-white text-text-main',
+                    'w-full pl-7 pr-14 py-2.5 rounded-lg border-2 bg-card text-text-main',
                     'border-border focus:border-primary focus:ring-2 focus:ring-primary/20',
                     'focus:outline-none transition-colors duration-150',
                   ].join(' ')}
@@ -273,7 +273,7 @@ export default function Step4WorkSituation() {
                   onChange={handleProposedIncome}
                   placeholder="e.g. 80000"
                   className={[
-                    'w-full pl-7 pr-14 py-2.5 rounded-lg border-2 bg-white text-text-main',
+                    'w-full pl-7 pr-14 py-2.5 rounded-lg border-2 bg-card text-text-main',
                     inputs.proposedAnnualIncome === 0 && proposedIncomeStr === ''
                       ? 'border-border'
                       : inputs.proposedAnnualIncome > 0
@@ -320,7 +320,7 @@ export default function Step4WorkSituation() {
                   onChange={handleWorkCosts}
                   placeholder="e.g. 60"
                   className={[
-                    'w-full pl-7 pr-14 py-2.5 rounded-lg border-2 bg-white text-text-main',
+                    'w-full pl-7 pr-14 py-2.5 rounded-lg border-2 bg-card text-text-main',
                     'border-border focus:border-primary focus:ring-2 focus:ring-primary/20',
                     'focus:outline-none transition-colors duration-150',
                   ].join(' ')}

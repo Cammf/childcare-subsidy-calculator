@@ -177,7 +177,7 @@ export default function Step1FamilySituation() {
             value={inputs.state}
             onChange={handleStateChange}
             className={[
-              'w-full sm:w-72 px-3 py-2.5 rounded-lg border-2 bg-white text-text-main',
+              'w-full sm:w-72 px-3 py-2.5 rounded-lg border-2 bg-card text-text-main',
               'border-border focus:border-primary focus:ring-2 focus:ring-primary/20',
               'focus:outline-none transition-colors duration-150',
             ].join(' ')}

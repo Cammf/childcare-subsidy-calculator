@@ -86,7 +86,7 @@ export default function PrivacyPage() {
     <main className="min-h-screen bg-gray-50">
 
       {/* Page header */}
-      <div className="bg-white border-b border-border">
+      <div className="bg-card border-b border-border">
         <div className="max-w-3xl mx-auto px-4 py-10 sm:px-6 lg:px-8">
           <h1 className="text-2xl font-bold text-text-main sm:text-3xl">Privacy Policy</h1>
           <p className="mt-2 text-sm text-muted">
@@ -96,7 +96,7 @@ export default function PrivacyPage() {
       </div>
 
       <div className="max-w-3xl mx-auto px-4 py-10 sm:px-6 lg:px-8">
-        <div className="rounded-2xl border border-border bg-white divide-y divide-border overflow-hidden">
+        <div className="rounded-2xl border border-border bg-card divide-y divide-border overflow-hidden">
           {sections.map((section) => (
             <section key={section.heading} className="px-6 py-5">
               <h2 className="text-base font-bold text-text-main mb-3">{section.heading}</h2>

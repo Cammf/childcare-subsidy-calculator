@@ -6,17 +6,21 @@ const config: Config = {
     "./src/components/**/*.{js,ts,jsx,tsx,mdx}",
     "./src/app/**/*.{js,ts,jsx,tsx,mdx}",
   ],
+  // 'class' strategy: next-themes sets class="dark" on <html>
+  darkMode: 'class',
   theme: {
     extend: {
       colors: {
-        primary: "#0E7490",
+        // Fixed accent colours — same in light and dark
+        primary:   "#0E7490",
         secondary: "#065F46",
-        warning: "#B45309",
-        background: "#F7F8FA",
-        card: "#FFFFFF",
-        "text-main": "#1A202C",
-        muted: "#4A5568",
-        border: "#E2E8F0",
+        warning:   "#B45309",
+        // Semantic tokens driven by CSS variables (switch with .dark class)
+        background: "var(--color-background)",
+        card:       "var(--color-card)",
+        "text-main":"var(--color-text-main)",
+        muted:      "var(--color-muted)",
+        border:     "var(--color-border)",
       },
       fontFamily: {
         sans: ["Inter", "sans-serif"],

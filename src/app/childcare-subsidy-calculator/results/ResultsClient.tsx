@@ -161,7 +161,7 @@ function PeriodToggle({
             'px-3 py-1.5 font-medium transition-colors duration-100',
             value === opt.value
               ? 'bg-primary text-white'
-              : 'bg-white text-muted hover:bg-gray-50 hover:text-text-main',
+              : 'bg-card text-muted hover:bg-gray-100 dark:hover:bg-slate-700 hover:text-text-main',
           ].join(' ')}
         >
           {opt.label}
@@ -406,7 +406,7 @@ function CostSummaryCard({
     : `${resolved.numberOfChildren} children`;
 
   return (
-    <div className="rounded-2xl border border-border bg-white overflow-hidden">
+    <div className="rounded-2xl border border-border bg-card overflow-hidden">
 
       {/* ── Card header ──────────────────────────────────────────────────── */}
       <div className="px-6 pt-6 pb-4 border-b border-border">
@@ -616,7 +616,7 @@ function BackToWorkPanel({ output }: { output: CalculationOutput }) {
   const hasNegative = scenarios.some((s) => !s.isWorthIt);
 
   return (
-    <div className="rounded-2xl border border-border bg-white overflow-hidden">
+    <div className="rounded-2xl border border-border bg-card overflow-hidden">
 
       {/* ── Card header ──────────────────────────────────────────────────── */}
       <div className="px-6 pt-6 pb-4 border-b border-border">
@@ -690,7 +690,7 @@ function BackToWorkPanel({ output }: { output: CalculationOutput }) {
             <table className="w-full text-sm border-collapse min-w-[640px]">
               <thead>
                 <tr>
-                  <th className="text-left text-xs font-medium text-muted py-2 pr-3 sticky left-0 bg-white z-10 min-w-[130px]" />
+                  <th className="text-left text-xs font-medium text-muted py-2 pr-3 sticky left-0 bg-card z-10 min-w-[130px]" />
                   <th className="text-right text-xs font-medium text-muted py-2 px-2 min-w-[90px]">
                     <span className="text-text-main">Current</span>
                   </th>
@@ -874,7 +874,7 @@ function BTWTableSection({ label }: { label: string }) {
     <tr>
       <td
         colSpan={7}
-        className="text-[10px] font-bold text-muted uppercase tracking-widest pt-4 pb-1 border-b border-border sticky left-0 bg-white"
+        className="text-[10px] font-bold text-muted uppercase tracking-widest pt-4 pb-1 border-b border-border sticky left-0 bg-card"
       >
         {label}
       </td>
@@ -905,7 +905,7 @@ function BTWTableRow({
     <tr className={highlight ? 'bg-gray-50' : ''}>
       <td className={[
         'py-1.5 pr-3 text-left whitespace-nowrap sticky left-0 z-10',
-        highlight ? 'bg-gray-50' : 'bg-white',
+        highlight ? 'bg-gray-50' : 'bg-card',
         bold ? 'font-semibold text-text-main' : muted ? 'text-muted' : 'text-text-main',
       ].join(' ')}>
         {label}
@@ -1140,7 +1140,7 @@ function IncomeSensitivityPanel({ output }: { output: CalculationOutput }) {
   }
 
   return (
-    <div className="rounded-2xl border border-border bg-white overflow-hidden">
+    <div className="rounded-2xl border border-border bg-card overflow-hidden">
 
       {/* ── Card header ──────────────────────────────────────────────────── */}
       <div className="px-6 pt-6 pb-4 border-b border-border">
@@ -1423,7 +1423,7 @@ function MultiChildComparisonPanel({ output }: { output: CalculationOutput }) {
   const govSubsidyYounger = annual.subsidyPerYear;
 
   return (
-    <div className="rounded-2xl border border-border bg-white overflow-hidden">
+    <div className="rounded-2xl border border-border bg-card overflow-hidden">
 
       {/* ── Card header ──────────────────────────────────────────────────── */}
       <div className="px-6 pt-6 pb-4 border-b border-border">
@@ -1646,7 +1646,7 @@ function KeyInsightsAccordion({ output }: { output: CalculationOutput }) {
   const annualCapAmount = 11003;
 
   return (
-    <div className="rounded-2xl border border-border bg-white overflow-hidden">
+    <div className="rounded-2xl border border-border bg-card overflow-hidden">
 
       {/* ── Card header ──────────────────────────────────────────────────── */}
       <div className="px-6 pt-6 pb-4 border-b border-border">
@@ -2015,7 +2015,7 @@ function WhatThisActuallyMeans({
     : 0;
 
   return (
-    <div className="rounded-2xl border border-border bg-white overflow-hidden">
+    <div className="rounded-2xl border border-border bg-card overflow-hidden">
 
       {/* ── Card header ──────────────────────────────────────────────────── */}
       <div className="px-6 pt-6 pb-4 border-b border-border">
@@ -2223,7 +2223,7 @@ function SharePanel({ output }: { output: CalculationOutput }) {
   }
 
   return (
-    <div className="rounded-2xl border border-border bg-white overflow-hidden print:hidden">
+    <div className="rounded-2xl border border-border bg-card overflow-hidden print:hidden">
       <div className="px-5 py-4 border-b border-border">
         <h3 className="text-base font-bold text-text-main">Share your results</h3>
         <p className="text-xs text-muted mt-0.5">
@@ -2237,7 +2237,7 @@ function SharePanel({ output }: { output: CalculationOutput }) {
           <button
             type="button"
             onClick={handleCopy}
-            className="inline-flex items-center gap-2 rounded-lg border border-border bg-white px-4 py-2.5 text-sm font-medium text-text-main hover:bg-gray-50 transition-colors"
+            className="inline-flex items-center gap-2 rounded-lg border border-border bg-card px-4 py-2.5 text-sm font-medium text-text-main hover:bg-gray-100 dark:hover:bg-slate-700 transition-colors"
           >
             {copied ? (
               <>
@@ -2260,7 +2260,7 @@ function SharePanel({ output }: { output: CalculationOutput }) {
           <button
             type="button"
             onClick={handleEmail}
-            className="inline-flex items-center gap-2 rounded-lg border border-border bg-white px-4 py-2.5 text-sm font-medium text-text-main hover:bg-gray-50 transition-colors"
+            className="inline-flex items-center gap-2 rounded-lg border border-border bg-card px-4 py-2.5 text-sm font-medium text-text-main hover:bg-gray-100 dark:hover:bg-slate-700 transition-colors"
           >
             <svg className="w-4 h-4 text-muted shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2} aria-hidden="true">
               <path strokeLinecap="round" strokeLinejoin="round" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
@@ -2272,7 +2272,7 @@ function SharePanel({ output }: { output: CalculationOutput }) {
           <button
             type="button"
             onClick={handlePrint}
-            className="inline-flex items-center gap-2 rounded-lg border border-border bg-white px-4 py-2.5 text-sm font-medium text-text-main hover:bg-gray-50 transition-colors"
+            className="inline-flex items-center gap-2 rounded-lg border border-border bg-card px-4 py-2.5 text-sm font-medium text-text-main hover:bg-gray-100 dark:hover:bg-slate-700 transition-colors"
           >
             <svg className="w-4 h-4 text-muted shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2} aria-hidden="true">
               <path strokeLinecap="round" strokeLinejoin="round" d="M17 17h2a2 2 0 002-2v-4a2 2 0 00-2-2H5a2 2 0 00-2 2v4a2 2 0 002 2h2m2 4h6a2 2 0 002-2v-4a2 2 0 00-2-2H9a2 2 0 00-2 2v4a2 2 0 002 2zm8-12V5a2 2 0 00-2-2H9a2 2 0 00-2 2v4h10z" />
@@ -2394,7 +2394,7 @@ function NextStepsPanel({ output }: { output: CalculationOutput }) {
   const isHighIncome = resolved.combinedAnnualIncome > 85279;
 
   return (
-    <div className="rounded-2xl border border-border bg-white overflow-hidden">
+    <div className="rounded-2xl border border-border bg-card overflow-hidden">
       {/* Header */}
       <div className="px-5 py-4 border-b border-border">
         <h3 className="text-base font-bold text-text-main">
@@ -2687,7 +2687,7 @@ export default function ResultsClient({ output, relationshipStatus, restoreUrl }
     <div className="space-y-5">
 
       {/* ── Input summary strip ─────────────────────────────────────────── */}
-      <div className="rounded-xl border border-border bg-white p-4 print:hidden">
+      <div className="rounded-xl border border-border bg-card p-4 print:hidden">
         <div className="flex items-center justify-between gap-2 mb-2">
           <p className="text-xs font-semibold text-muted uppercase tracking-wide">
             Based on your inputs

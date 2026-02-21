@@ -218,7 +218,7 @@ function DollarInput({
           }}
           placeholder={placeholder}
           className={[
-            'w-full pl-7 pr-14 py-2.5 rounded-lg border-2 bg-white text-text-main',
+            'w-full pl-7 pr-14 py-2.5 rounded-lg border-2 bg-card text-text-main',
             borderClass,
             'focus:border-primary focus:ring-2 focus:ring-primary/20',
             'focus:outline-none transition-colors duration-150',
@@ -289,7 +289,7 @@ function Step1({
                   'flex items-center justify-center py-2.5 px-4 rounded-lg border-2 font-medium text-sm transition-all duration-150',
                   inputs.relationshipStatus === rs
                     ? 'border-primary bg-teal-50 text-primary'
-                    : 'border-border bg-white text-text-main hover:border-primary/40',
+                    : 'border-border bg-card text-text-main hover:border-primary/40',
                 ].join(' ')}
                 aria-pressed={inputs.relationshipStatus === rs}
               >
@@ -370,7 +370,7 @@ function Step1({
                   'flex flex-col items-center justify-center p-3 rounded-lg border-2 text-sm transition-all duration-150 min-h-[64px]',
                   inputs.youngestChildAge === opt.value
                     ? 'border-primary bg-teal-50 text-primary'
-                    : 'border-border bg-white text-text-main hover:border-primary/40',
+                    : 'border-border bg-card text-text-main hover:border-primary/40',
                 ].join(' ')}
                 aria-pressed={inputs.youngestChildAge === opt.value}
               >
@@ -406,7 +406,7 @@ function Step1({
                   'font-medium text-sm transition-all duration-150 min-h-[56px]',
                   inputs.daysPerWeek === d
                     ? 'border-primary bg-teal-50 text-primary'
-                    : 'border-border bg-white text-text-main hover:border-primary/40',
+                    : 'border-border bg-card text-text-main hover:border-primary/40',
                 ].join(' ')}
                 aria-pressed={inputs.daysPerWeek === d}
               >
@@ -434,7 +434,7 @@ function Step1({
                 onClick={() => handleFeeOptionChange(false)}
                 className={[
                   'w-full flex items-start gap-3 p-4 rounded-lg border-2 text-left transition-all duration-150',
-                  !useKnownFee ? 'border-primary bg-teal-50' : 'border-border bg-white hover:border-primary/40 hover:bg-gray-50',
+                  !useKnownFee ? 'border-primary bg-teal-50' : 'border-border bg-card hover:border-primary/40 hover:bg-gray-50',
                 ].join(' ')}
               >
                 <div className={['mt-0.5 w-4 h-4 rounded-full border-2 flex-shrink-0 flex items-center justify-center', !useKnownFee ? 'border-primary' : 'border-gray-300'].join(' ')} aria-hidden="true">
@@ -457,7 +457,7 @@ function Step1({
               onClick={() => handleFeeOptionChange(true)}
               className={[
                 'w-full flex items-start gap-3 p-4 rounded-lg border-2 text-left transition-all duration-150',
-                useKnownFee ? 'border-primary bg-teal-50' : 'border-border bg-white hover:border-primary/40 hover:bg-gray-50',
+                useKnownFee ? 'border-primary bg-teal-50' : 'border-border bg-card hover:border-primary/40 hover:bg-gray-50',
                 isInHomeCare ? 'border-primary bg-teal-50' : '',
               ].join(' ')}
             >
@@ -485,7 +485,7 @@ function Step1({
                 id="btw-state"
                 value={inputs.state}
                 onChange={(e) => update({ state: e.target.value as State })}
-                className="rounded-lg border-2 border-border bg-white text-text-main px-3 py-2 text-sm focus:border-primary focus:ring-2 focus:ring-primary/20 focus:outline-none"
+                className="rounded-lg border-2 border-border bg-card text-text-main px-3 py-2 text-sm focus:border-primary focus:ring-2 focus:ring-primary/20 focus:outline-none"
               >
                 {STATES.map((s) => (
                   <option key={s} value={s}>{s}</option>
@@ -514,7 +514,7 @@ function Step1({
                     update({ feePerDay: parsed });
                   }}
                   placeholder="e.g. 150"
-                  className="w-full pl-7 pr-3 py-2.5 rounded-lg border-2 bg-white text-text-main border-border focus:border-primary focus:ring-2 focus:ring-primary/20 focus:outline-none transition-colors"
+                  className="w-full pl-7 pr-3 py-2.5 rounded-lg border-2 bg-card text-text-main border-border focus:border-primary focus:ring-2 focus:ring-primary/20 focus:outline-none transition-colors"
                 />
               </div>
               <p className="mt-1.5 text-xs text-muted">
@@ -735,7 +735,7 @@ function Step2({
           For each working scenario (1–5 days/week), we calculate:
         </p>
         <div className="mt-3 space-y-2">
-          <div className="p-2.5 rounded-lg bg-white border border-border text-xs font-mono leading-relaxed">
+          <div className="p-2.5 rounded-lg bg-card border border-border text-xs font-mono leading-relaxed">
             <p className="font-bold text-primary mb-1">Net benefit =</p>
             <p>  + new net income after tax</p>
             <p>  − current net income</p>

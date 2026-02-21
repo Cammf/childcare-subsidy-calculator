@@ -55,7 +55,7 @@ export default function AboutPage() {
     <main className="min-h-screen bg-gray-50">
 
       {/* Page header */}
-      <div className="bg-white border-b border-border">
+      <div className="bg-card border-b border-border">
         <div className="max-w-3xl mx-auto px-4 py-10 sm:px-6 lg:px-8">
           <h1 className="text-2xl font-bold text-text-main sm:text-3xl">About This Site</h1>
           <p className="mt-2 text-base text-muted">
@@ -71,7 +71,7 @@ export default function AboutPage() {
           <h2 id="purpose-heading" className="text-lg font-bold text-text-main mb-3">
             What This Site Does
           </h2>
-          <div className="rounded-2xl border border-border bg-white p-6 space-y-3 text-sm text-text-main leading-relaxed">
+          <div className="rounded-2xl border border-border bg-card p-6 space-y-3 text-sm text-text-main leading-relaxed">
             <p>
               The Child Care Subsidy Calculator helps Australian families understand
               exactly how the Child Care Subsidy (CCS) applies to their situation —
@@ -138,7 +138,7 @@ export default function AboutPage() {
           <h2 id="methodology-heading" className="text-lg font-bold text-text-main mb-3">
             How the Calculations Work
           </h2>
-          <div className="rounded-2xl border border-border bg-white p-6 space-y-4 text-sm text-text-main leading-relaxed">
+          <div className="rounded-2xl border border-border bg-card p-6 space-y-4 text-sm text-text-main leading-relaxed">
             <div>
               <h3 className="font-semibold mb-1">CCS percentage</h3>
               <p className="text-muted">
@@ -192,7 +192,7 @@ export default function AboutPage() {
           <h2 id="data-heading" className="text-lg font-bold text-text-main mb-3">
             Data Sources
           </h2>
-          <div className="rounded-2xl border border-border bg-white overflow-hidden">
+          <div className="rounded-2xl border border-border bg-card overflow-hidden">
             <ul className="divide-y divide-border">
               {dataSources.map((source) => (
                 <li key={source.url} className="px-6 py-4">
@@ -223,7 +223,7 @@ export default function AboutPage() {
           <h2 id="updates-heading" className="text-lg font-bold text-text-main mb-3">
             When Rates Are Updated
           </h2>
-          <div className="rounded-2xl border border-border bg-white p-6 text-sm text-text-main leading-relaxed space-y-2">
+          <div className="rounded-2xl border border-border bg-card p-6 text-sm text-text-main leading-relaxed space-y-2">
             <p>
               CCS income thresholds and hourly rate caps are updated by the government
               on <strong>1 July each year</strong> for the new financial year.

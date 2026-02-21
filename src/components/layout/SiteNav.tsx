@@ -3,6 +3,7 @@
 import { useState } from 'react';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
+import ThemeToggle from './ThemeToggle';
 
 // ──────────────────────────────────────────────────────────────────────────────
 // Nav link data
@@ -73,7 +74,7 @@ function Dropdown({ label, isOpen, onToggle, onClose, children }: DropdownProps)
 
       {isOpen && (
         <div
-          className="absolute top-full left-0 mt-1 bg-white border border-border rounded-lg shadow-lg z-50 min-w-[260px] py-1"
+          className="absolute top-full left-0 mt-1 bg-card border border-border rounded-lg shadow-lg z-50 min-w-[260px] py-1"
           role="menu"
         >
           {children}
@@ -97,7 +98,7 @@ export default function SiteNav() {
   const close = () => setOpenDropdown(null);
 
   return (
-    <header className="bg-white border-b border-border sticky top-0 z-40 print:hidden">
+    <header className="bg-card border-b border-border sticky top-0 z-40 print:hidden">
       <nav
         className="max-w-6xl mx-auto px-4 flex items-center justify-between"
         aria-label="Main navigation"
@@ -143,7 +144,7 @@ export default function SiteNav() {
                 href={link.href}
                 role="menuitem"
                 onClick={close}
-                className={`block px-4 py-3 hover:bg-teal-50 transition-colors ${
+                className={`block px-4 py-3 hover:bg-teal-50 dark:hover:bg-teal-950 transition-colors ${
                   pathname === link.href ? 'text-primary font-medium' : 'text-text-main'
                 }`}
               >
@@ -165,7 +166,7 @@ export default function SiteNav() {
                 href={link.href}
                 role="menuitem"
                 onClick={close}
-                className={`block px-4 py-2.5 text-sm hover:bg-teal-50 transition-colors ${
+                className={`block px-4 py-2.5 text-sm hover:bg-teal-50 dark:hover:bg-teal-950 transition-colors ${
                   pathname === link.href ? 'text-primary font-medium' : 'text-text-main'
                 }`}
               >
@@ -184,11 +185,14 @@ export default function SiteNav() {
             About
           </Link>
 
+          {/* Theme toggle */}
+          <ThemeToggle />
+
           {/* Primary CTA */}
           <Link
             href="/childcare-subsidy-calculator"
             onClick={close}
-            className="ml-3 btn-primary text-sm !py-2 !px-4 !min-h-[40px]"
+            className="ml-2 btn-primary text-sm !py-2 !px-4 !min-h-[40px]"
           >
             Calculate my subsidy →
           </Link>
@@ -216,7 +220,7 @@ export default function SiteNav() {
 
       {/* Mobile menu */}
       {mobileMenuOpen && (
-        <div className="md:hidden border-t border-border bg-white">
+        <div className="md:hidden border-t border-border bg-card">
           <div className="px-4 py-3 space-y-1">
             <p className="text-xs font-semibold uppercase tracking-wide text-muted mb-2 mt-1">Calculators</p>
             {calculatorLinks.map((link) => (
@@ -248,13 +252,18 @@ export default function SiteNav() {
               >
                 About
               </Link>
-              <Link
-                href="/childcare-subsidy-calculator"
-                onClick={() => setMobileMenuOpen(false)}
-                className="block mt-3 btn-primary text-center text-sm"
-              >
-                Calculate my subsidy →
-              </Link>
+              <div className="flex items-center justify-between mt-3">
+                <Link
+                  href="/childcare-subsidy-calculator"
+                  onClick={() => setMobileMenuOpen(false)}
+                  className="flex-1 btn-primary text-center text-sm"
+                >
+                  Calculate my subsidy →
+                </Link>
+                <div className="ml-2 flex-shrink-0">
+                  <ThemeToggle />
+                </div>
+              </div>
             </div>
           </div>
         </div>

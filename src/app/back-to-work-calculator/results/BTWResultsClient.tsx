@@ -47,7 +47,7 @@ function TableSection({ label }: { label: string }) {
     <tr>
       <td
         colSpan={7}
-        className="text-[10px] font-bold text-muted uppercase tracking-widest pt-4 pb-1 border-b border-border sticky left-0 bg-white"
+        className="text-[10px] font-bold text-muted uppercase tracking-widest pt-4 pb-1 border-b border-border sticky left-0 bg-card"
       >
         {label}
       </td>
@@ -79,7 +79,7 @@ function TableRow({
       <td
         className={[
           'py-1.5 pr-3 text-left whitespace-nowrap sticky left-0 z-10',
-          highlight ? 'bg-gray-50' : 'bg-white',
+          highlight ? 'bg-gray-50' : 'bg-card',
           bold ? 'font-semibold text-text-main' : muted ? 'text-muted' : 'text-text-main',
         ].join(' ')}
       >
@@ -308,7 +308,7 @@ export default function BTWResultsClient({
     <div className="space-y-5">
 
       {/* ── Input summary strip ─────────────────────────────────────────── */}
-      <div className="rounded-xl border border-border bg-white p-4 print:hidden">
+      <div className="rounded-xl border border-border bg-card p-4 print:hidden">
         <div className="flex items-center justify-between gap-2 mb-2">
           <p className="text-xs font-semibold text-muted uppercase tracking-wide">
             Based on your inputs
@@ -425,7 +425,7 @@ export default function BTWResultsClient({
       )}
 
       {/* ── Scenario comparison table ────────────────────────────────────── */}
-      <div className="rounded-2xl border border-border bg-white overflow-hidden">
+      <div className="rounded-2xl border border-border bg-card overflow-hidden">
         <div className="px-5 py-4 border-b border-border">
           <h2 className="text-base font-bold text-text-main">
             Full scenario comparison
@@ -440,7 +440,7 @@ export default function BTWResultsClient({
             <table className="w-full text-sm border-collapse min-w-[640px]">
               <thead>
                 <tr>
-                  <th className="text-left text-xs font-medium text-muted py-2 pr-3 sticky left-0 bg-white z-10 min-w-[140px]" />
+                  <th className="text-left text-xs font-medium text-muted py-2 pr-3 sticky left-0 bg-card z-10 min-w-[140px]" />
                   <th className="text-right text-xs font-medium py-2 px-2 min-w-[90px]">
                     <span className="text-text-main">Current</span>
                   </th>
@@ -639,7 +639,7 @@ export default function BTWResultsClient({
       </div>
 
       {/* ── "What This Means" interpretation ────────────────────────────── */}
-      <div className="rounded-2xl border border-border bg-white overflow-hidden">
+      <div className="rounded-2xl border border-border bg-card overflow-hidden">
         <div className="px-5 py-4 border-b border-border">
           <h2 className="text-base font-bold text-text-main">
             What this means for your family
@@ -680,7 +680,7 @@ export default function BTWResultsClient({
       </div>
 
       {/* ── Share + Edit + CTA ───────────────────────────────────────────── */}
-      <div className="rounded-2xl border border-border bg-white overflow-hidden print:hidden">
+      <div className="rounded-2xl border border-border bg-card overflow-hidden print:hidden">
         <div className="px-5 py-4 border-b border-border">
           <h3 className="text-base font-bold text-text-main">Save or share your results</h3>
         </div>
@@ -689,7 +689,7 @@ export default function BTWResultsClient({
           <button
             type="button"
             onClick={handleCopy}
-            className="inline-flex items-center gap-2 rounded-lg border border-border bg-white px-4 py-2.5 text-sm font-medium text-text-main hover:bg-gray-50 transition-colors"
+            className="inline-flex items-center gap-2 rounded-lg border border-border bg-card px-4 py-2.5 text-sm font-medium text-text-main hover:bg-gray-100 dark:hover:bg-slate-700 transition-colors"
           >
             {copied ? (
               <>
@@ -712,7 +712,7 @@ export default function BTWResultsClient({
           <button
             type="button"
             onClick={() => typeof window !== 'undefined' && window.print()}
-            className="inline-flex items-center gap-2 rounded-lg border border-border bg-white px-4 py-2.5 text-sm font-medium text-text-main hover:bg-gray-50 transition-colors"
+            className="inline-flex items-center gap-2 rounded-lg border border-border bg-card px-4 py-2.5 text-sm font-medium text-text-main hover:bg-gray-100 dark:hover:bg-slate-700 transition-colors"
           >
             <svg className="w-4 h-4 text-muted shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2} aria-hidden="true">
               <path strokeLinecap="round" strokeLinejoin="round" d="M17 17h2a2 2 0 002-2v-4a2 2 0 00-2-2H5a2 2 0 00-2 2v4a2 2 0 002 2h2m2 4h6a2 2 0 002-2v-4a2 2 0 00-2-2H9a2 2 0 00-2 2v4a2 2 0 002 2zm8-12V5a2 2 0 00-2-2H9a2 2 0 00-2 2v4h10z" />

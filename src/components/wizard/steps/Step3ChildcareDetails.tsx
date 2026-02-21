@@ -182,7 +182,7 @@ export default function Step3ChildcareDetails() {
                   'font-medium text-sm transition-all duration-150 min-h-[56px]',
                   inputs.daysPerWeek === d
                     ? 'border-primary bg-teal-50 text-primary'
-                    : 'border-border bg-white text-text-main hover:border-primary/40',
+                    : 'border-border bg-card text-text-main hover:border-primary/40',
                 ].join(' ')}
                 aria-pressed={inputs.daysPerWeek === d}
               >
@@ -218,7 +218,7 @@ export default function Step3ChildcareDetails() {
                   'transition-all duration-150',
                   !useKnownFee
                     ? 'border-primary bg-teal-50'
-                    : 'border-border bg-white hover:border-primary/40 hover:bg-gray-50',
+                    : 'border-border bg-card hover:border-primary/40 hover:bg-gray-50',
                 ].join(' ')}
               >
                 <div
@@ -254,7 +254,7 @@ export default function Step3ChildcareDetails() {
                 'transition-all duration-150',
                 useKnownFee
                   ? 'border-primary bg-teal-50'
-                  : 'border-border bg-white hover:border-primary/40 hover:bg-gray-50',
+                  : 'border-border bg-card hover:border-primary/40 hover:bg-gray-50',
                 isInHomeCare ? 'border-primary bg-teal-50' : '',
               ].join(' ')}
             >
@@ -303,7 +303,7 @@ export default function Step3ChildcareDetails() {
                   onChange={handleFeeInput}
                   placeholder="e.g. 150"
                   className={[
-                    'w-full pl-7 pr-3 py-2.5 rounded-lg border-2 bg-white text-text-main',
+                    'w-full pl-7 pr-3 py-2.5 rounded-lg border-2 bg-card text-text-main',
                     'border-border focus:border-primary focus:ring-2 focus:ring-primary/20',
                     'focus:outline-none transition-colors duration-150',
                   ].join(' ')}

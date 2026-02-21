@@ -33,7 +33,7 @@ export default function RadioCard({
         'min-h-[48px]',
         checked
           ? 'border-primary bg-teal-50'
-          : 'border-border bg-white hover:border-primary/40 hover:bg-gray-50',
+          : 'border-border bg-card hover:border-primary/40 hover:bg-gray-50',
       ].join(' ')}
     >
       <input
