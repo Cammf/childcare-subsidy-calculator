@@ -141,7 +141,7 @@ export default function BTWResultsPage({ searchParams }: PageProps) {
   const { bestScenario } = result;
 
   return (
-    <main className="min-h-screen bg-gray-50">
+    <main className="min-h-screen bg-background">
 
       {/* ── Page header ─────────────────────────────────────────────────── */}
       <div className="bg-card border-b border-border">

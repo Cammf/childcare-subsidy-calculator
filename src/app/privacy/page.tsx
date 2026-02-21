@@ -83,7 +83,7 @@ const sections = [
 
 export default function PrivacyPage() {
   return (
-    <main className="min-h-screen bg-gray-50">
+    <main className="min-h-screen bg-background">
 
       {/* Page header */}
       <div className="bg-card border-b border-border">

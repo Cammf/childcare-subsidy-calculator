@@ -127,7 +127,7 @@ export default function ResultsPage({ searchParams }: PageProps) {
     : `${output.ccsPercentage.percent}%`;
 
   return (
-    <main className="min-h-screen bg-gray-50">
+    <main className="min-h-screen bg-background">
 
       {/* ── Page header ─────────────────────────────────────────────────── */}
       <div className="bg-card border-b border-border">

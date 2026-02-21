@@ -70,7 +70,7 @@ export default function ChildcareSubsidyCalculatorPage({ searchParams }: PagePro
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
       />
 
-      <main className="min-h-screen bg-gray-50">
+      <main className="min-h-screen bg-background">
         {/* Page header */}
         <div className="bg-card border-b border-border">
           <div className="max-w-4xl mx-auto px-4 py-8 sm:px-6 lg:px-8">

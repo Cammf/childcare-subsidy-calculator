@@ -222,6 +222,33 @@
   border-bottom: none;
 }
 
+/* =============================================================================
+   DARK MODE OVERRIDES — hard-coded Tailwind utility classes
+   These catch bg-gray-50 / bg-teal-50 / hover variants used throughout the
+   wizard and results components that bypass CSS variable theming.
+   Only takes effect when next-themes adds class="dark" to <html>.
+   ============================================================================= */
+
+/* Page panels and alternating table rows — 4% white lift above bg-card (slate-800) */
+.dark .bg-gray-50 {
+  background-color: rgba(255, 255, 255, 0.04);
+}
+
+/* Selected card states and info callouts — translucent teal tint on dark surface */
+.dark .bg-teal-50 {
+  background-color: rgba(13, 148, 136, 0.15);
+}
+
+/* Unselected card hover on dark surface → slate-700, slightly lighter than slate-800 base */
+.dark .hover\:bg-gray-50:hover {
+  background-color: #334155;
+}
+
+/* Active-intent card hover on dark surface → slightly stronger teal tint */
+.dark .hover\:bg-teal-50:hover {
+  background-color: rgba(13, 148, 136, 0.22);
+}
+
 /* Print styles — clean print view for results page */
 @media print {
   /* Hide ads and interactive-only elements */
