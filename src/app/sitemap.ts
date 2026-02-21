@@ -59,6 +59,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: 'monthly',
       priority: 0.8,
     },
+    {
+      url: `${SITE_URL}/guides/3-day-guarantee`,
+      lastModified: '2026-02-22',
+      changeFrequency: 'monthly',
+      priority: 0.8,
+    },
 
     // ── Site pages ───────────────────────────────────────────────────────────
     {

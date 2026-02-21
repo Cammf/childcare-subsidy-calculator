@@ -65,7 +65,7 @@ const GUIDES: Guide[] = [
       'What changed on 5 January 2026, who benefits, and what the 72-hours-per-fortnight rule means for your family in practice.',
     readingTime: 5,
     category: 'subsidy',
-    live: false,
+    live: true,
   },
   {
     href: '/guides/activity-test-explained',
