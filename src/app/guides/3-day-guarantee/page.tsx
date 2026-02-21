@@ -21,7 +21,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'The 3-Day Guarantee Explained — Childcare Subsidy 2026',
     description:
-      'From 5 January 2026, all eligible families get 72 subsidised hours per fortnight regardless of activity. Here\u2019s what it means for your family.',
+      "From 5 January 2026, all eligible families get 72 subsidised hours per fortnight regardless of activity. Here\u2019s what it means for your family.",
     url: `${SITE_URL}/guides/3-day-guarantee`,
     type: 'article',
   },
@@ -37,7 +37,7 @@ const TOC = [
   { id: 'still-need-activity',    label: 'When you still need the activity test' },
   { id: 'worked-example-1',       label: 'Example: stay-at-home parent' },
   { id: 'worked-example-2',       label: 'Example: returning to work part-time' },
-  { id: 'income-test-unchanged',  label: 'The income test hasn\u2019t changed' },
+  { id: 'income-test-unchanged',  label: "The income test hasn\u2019t changed" },
   { id: 'how-to-access',          label: 'How to access the 3-day guarantee' },
   { id: 'common-questions',       label: 'Common questions' },
 ];
@@ -48,37 +48,37 @@ const FAQ = [
   {
     question: 'What is the 3-day guarantee for childcare?',
     answer:
-      'The 3-day guarantee is an Australian Government policy effective from 5 January 2026 that provides all eligible families with a minimum of 72 subsidised childcare hours per fortnight \u2014 equivalent to about 3 days per week \u2014 regardless of the parents\u2019 activity level. Previously, families where neither parent met the activity test received very limited or no subsidised hours.',
+      "The 3-day guarantee is an Australian Government policy effective from 5 January 2026 that provides all eligible families with a minimum of 72 subsidised childcare hours per fortnight \u2014 equivalent to about 3 days per week \u2014 regardless of the parents\u2019 activity level. Previously, families where neither parent met the activity test received very limited or no subsidised hours.",
   },
   {
     question: 'Do I need to do anything to get the 3-day guarantee?',
     answer:
-      'If you already receive CCS, the 3-day guarantee is applied automatically \u2014 no application needed. If you don\u2019t currently receive CCS, you need to <a href="/guides/how-ccs-works#how-to-apply">apply through myGov/Centrelink</a> first. Standard CCS eligibility requirements still apply (residency, child age, approved provider).',
+      "If you already receive CCS, the 3-day guarantee is applied automatically \u2014 no application needed. If you don\u2019t currently receive CCS, you need to <a href=\"/guides/how-ccs-works#how-to-apply\">apply through myGov/Centrelink</a> first. Standard CCS eligibility requirements still apply (residency, child age, approved provider).",
   },
   {
     question: 'Can I still get more than 3 days of subsidised care?',
     answer:
-      'Yes. The 3-day guarantee is the <em>minimum</em>. If you meet the activity test at the higher threshold (48+ hours of recognised activity per fortnight), you can access up to 100 subsidised hours per fortnight \u2014 enough for about 5 days per week. The guarantee only sets the floor, not the ceiling.',
+      'Yes. The 3-day guarantee is the <em>minimum</em>. If you meet the activity test at the higher threshold (48+ hours of recognised activity per fortnight), you can access up to 100 subsidised hours per fortnight — enough for about 5 days per week. The guarantee only sets the floor, not the ceiling.',
   },
   {
     question: 'Does the 3-day guarantee change how much subsidy I get per hour?',
     answer:
-      'No. The guarantee only affects the <em>number of subsidised hours</em> you can access. Your CCS percentage (the share of the fee the government pays) is still determined entirely by your family income. A family earning $150,000 still gets 77% \u2014 but they\u2019re now guaranteed at least 72 hours of that 77% subsidy per fortnight.',
+      "No. The guarantee only affects the <em>number of subsidised hours</em> you can access. Your CCS percentage (the share of the fee the government pays) is still determined entirely by your family income. A family earning $150,000 still gets 77% \u2014 but they\u2019re now guaranteed at least 72 hours of that 77% subsidy per fortnight.",
   },
   {
     question: 'What counts as 72 hours per fortnight in days?',
     answer:
-      '72 hours per fortnight translates to about 36 hours per week. In practice, that\u2019s roughly 3 days of long day care (12-hour sessions) or 3.6 days of shorter sessions (10 hours). Most families use it as 3 full days per week per child.',
+      "72 hours per fortnight translates to about 36 hours per week. In practice, that\u2019s roughly 3 days of long day care (12-hour sessions) or 3.6 days of shorter sessions (10 hours). Most families use it as 3 full days per week per child.",
   },
   {
     question: 'Does the 3-day guarantee apply to all types of childcare?',
     answer:
-      'Yes \u2014 it applies to all CCS-approved care types including centre-based day care, family day care, outside school hours care (OSHC), and in-home care. The same hourly rate caps apply as before.',
+      'Yes — it applies to all CCS-approved care types including centre-based day care, family day care, outside school hours care (OSHC), and in-home care. The same hourly rate caps apply as before.',
   },
   {
     question: 'What if I only want 2 days of childcare per week?',
     answer:
-      'The guarantee gives you the <em>option</em> to use up to 3 days \u2014 it doesn\u2019t require you to. If you only need 2 days, you simply use fewer hours than your 72-hour entitlement. There\u2019s no penalty for using less.',
+      "The guarantee gives you the <em>option</em> to use up to 3 days \u2014 it doesn\u2019t require you to. If you only need 2 days, you simply use fewer hours than your 72-hour entitlement. There\u2019s no penalty for using less.",
   },
   {
     question: 'Is the 3-day guarantee permanent?',
@@ -94,7 +94,7 @@ const RELATED = [
     href: '/guides/how-ccs-works',
     title: 'How the CCS Works',
     description:
-      'The complete overview \u2014 income test, hourly caps, activity test, withholding, and how to apply.',
+      'The complete overview — income test, hourly caps, activity test, withholding, and how to apply.',
   },
   {
     href: '/guides/back-to-work-childcare',
@@ -116,7 +116,7 @@ export default function ThreeDayGuaranteePage() {
   return (
     <GuideLayout
       title="The 3-Day Guarantee Explained"
-      description="From 5 January 2026, every eligible family receives a minimum of 72 subsidised childcare hours per fortnight \u2014 about 3 days per week \u2014 regardless of activity level. Here\u2019s what changed, who benefits, and what it means in practice."
+      description="From 5 January 2026, every eligible family receives a minimum of 72 subsidised childcare hours per fortnight — about 3 days per week — regardless of activity level. Here's what changed, who benefits, and what it means in practice."
       lastUpdated="2026-02-22"
       readingTimeMinutes={5}
       breadcrumbs={[{ label: 'The 3-Day Guarantee' }]}
