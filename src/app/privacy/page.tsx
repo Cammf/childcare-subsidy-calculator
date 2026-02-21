@@ -9,6 +9,23 @@ export const metadata: Metadata = {
   title: `Privacy Policy | ${SITE_NAME}`,
   description: 'Privacy policy for the Child Care Subsidy Calculator — what data we collect, how it is used, and your rights.',
   alternates: { canonical: `${SITE_URL}/privacy` },
+  openGraph: {
+    title: 'Privacy Policy — Child Care Subsidy Calculator',
+    description: 'What data we collect, how it is used, and your rights when using the Child Care Subsidy Calculator.',
+    url: `${SITE_URL}/privacy`,
+    type: 'website',
+  },
+};
+
+// ─── Structured data ─────────────────────────────────────────────────────────
+
+const breadcrumbLd = {
+  '@context': 'https://schema.org',
+  '@type': 'BreadcrumbList',
+  itemListElement: [
+    { '@type': 'ListItem', position: 1, name: 'Home', item: SITE_URL },
+    { '@type': 'ListItem', position: 2, name: 'Privacy Policy' },
+  ],
 };
 
 // ─── Sections ─────────────────────────────────────────────────────────────────
@@ -83,6 +100,11 @@ const sections = [
 
 export default function PrivacyPage() {
   return (
+    <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbLd) }}
+      />
     <main className="min-h-screen bg-background">
 
       {/* Page header */}
@@ -116,5 +138,6 @@ export default function PrivacyPage() {
         </p>
       </div>
     </main>
+    </>
   );
 }

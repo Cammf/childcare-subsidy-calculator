@@ -722,6 +722,52 @@ export default function BTWResultsClient({
         </div>
       </div>
 
+      {/* ── Related guides ──────────────────────────────────────────────── */}
+      <section className="print:hidden" aria-labelledby="btw-related-guides-heading">
+        <h2
+          id="btw-related-guides-heading"
+          className="text-lg font-semibold text-text-main mb-4"
+        >
+          Learn more
+        </h2>
+        <div className="grid gap-4 sm:grid-cols-3">
+          {[
+            {
+              href: '/guides/back-to-work-childcare',
+              title: 'Is Going Back to Work Worth It?',
+              description:
+                'Deep-dive guide: the CCS cascade effect, part-time vs full-time, hidden costs, and three detailed worked examples.',
+            },
+            {
+              href: '/guides/how-ccs-works',
+              title: 'How the Child Care Subsidy Works',
+              description:
+                'A complete guide to CCS — income test, hourly caps, activity test, 5% withholding, and how to apply.',
+            },
+            {
+              href: '/guides/ccs-income-thresholds',
+              title: 'CCS Income Test Explained',
+              description:
+                'The tapering formula, full CCS rate table from $60k to $535k, what counts as family income, and common mistakes.',
+            },
+          ].map((guide) => (
+            <Link
+              key={guide.href}
+              href={guide.href}
+              className="block p-4 bg-card border border-border rounded-xl hover:border-primary hover:shadow-sm transition-all group"
+            >
+              <h3 className="font-semibold text-sm text-text-main group-hover:text-primary mb-1.5 leading-snug">
+                {guide.title}
+              </h3>
+              <p className="text-xs text-muted leading-relaxed">{guide.description}</p>
+              <span className="mt-2 inline-block text-xs text-primary font-medium">
+                Read guide →
+              </span>
+            </Link>
+          ))}
+        </div>
+      </section>
+
       {/* ── Navigation ──────────────────────────────────────────────────── */}
       <div className="flex items-center justify-between pt-2 pb-6 print:hidden">
         <Link

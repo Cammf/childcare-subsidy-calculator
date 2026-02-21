@@ -30,6 +30,15 @@ export const metadata: Metadata = {
 
 // ─── JSON-LD schema ──────────────────────────────────────────────────────────
 
+const breadcrumbLd = {
+  '@context': 'https://schema.org',
+  '@type': 'BreadcrumbList',
+  itemListElement: [
+    { '@type': 'ListItem', position: 1, name: 'Home', item: SITE_URL },
+    { '@type': 'ListItem', position: 2, name: 'Child Care Subsidy Calculator' },
+  ],
+};
+
 const jsonLd = {
   '@context': 'https://schema.org',
   '@type': 'WebApplication',
@@ -65,6 +74,10 @@ export default function ChildcareSubsidyCalculatorPage({ searchParams }: PagePro
   return (
     <>
       {/* Structured data */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbLd) }}
+      />
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}

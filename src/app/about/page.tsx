@@ -9,8 +9,26 @@ import { SITE_NAME, SITE_URL } from '@/lib/siteConfig';
 export const metadata: Metadata = {
   title: `About This Site | ${SITE_NAME}`,
   description:
-    'About the Child Care Subsidy Calculator — how it works, where the data comes from, and how to use it to understand your family\'s childcare costs.',
+    "About the Child Care Subsidy Calculator — how it works, where the data comes from, and how to use it to understand your family's childcare costs.",
   alternates: { canonical: `${SITE_URL}/about` },
+  openGraph: {
+    title: 'About the Child Care Subsidy Calculator',
+    description:
+      "How the calculator works, where the data comes from, and what this site is — and isn't.",
+    url: `${SITE_URL}/about`,
+    type: 'website',
+  },
+};
+
+// ─── Structured data ─────────────────────────────────────────────────────────
+
+const breadcrumbLd = {
+  '@context': 'https://schema.org',
+  '@type': 'BreadcrumbList',
+  itemListElement: [
+    { '@type': 'ListItem', position: 1, name: 'Home', item: SITE_URL },
+    { '@type': 'ListItem', position: 2, name: 'About' },
+  ],
 };
 
 // ─── Data ─────────────────────────────────────────────────────────────────────
@@ -52,6 +70,11 @@ const dataSources = [
 
 export default function AboutPage() {
   return (
+    <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbLd) }}
+      />
     <main className="min-h-screen bg-background">
 
       {/* Page header */}
@@ -247,5 +270,6 @@ export default function AboutPage() {
 
       </div>
     </main>
+    </>
   );
 }
