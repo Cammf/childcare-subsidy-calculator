@@ -41,16 +41,16 @@ const CATEGORIES: Record<Guide['category'], { label: string; colour: string }> =
 
 const GUIDES: Guide[] = [
   {
-    href: '/guides/how-child-care-subsidy-works',
+    href: '/guides/how-ccs-works',
     title: 'How the Child Care Subsidy Works',
     description:
       'A complete plain-language explainer — income test, hourly rate caps, activity test, 5% withholding, and how to apply. Includes worked examples.',
     readingTime: 10,
     category: 'subsidy',
-    live: false,
+    live: true,
   },
   {
-    href: '/guides/childcare-subsidy-income-test',
+    href: '/guides/ccs-income-thresholds',
     title: 'CCS Income Test Explained',
     description:
       'How the income thresholds and tapering formula work. Worked examples at key income levels plus common income sources people forget to include.',
@@ -68,6 +68,15 @@ const GUIDES: Guide[] = [
     live: false,
   },
   {
+    href: '/guides/activity-test-explained',
+    title: 'Activity Test Explained',
+    description:
+      'How the CCS activity test determines how many subsidised hours you can access — and what counts as recognised activity.',
+    readingTime: 5,
+    category: 'subsidy',
+    live: false,
+  },
+  {
     href: '/guides/childcare-subsidy-multiple-children',
     title: 'CCS for Multiple Children',
     description:
@@ -77,12 +86,21 @@ const GUIDES: Guide[] = [
     live: false,
   },
   {
-    href: '/guides/is-it-worth-going-back-to-work',
+    href: '/guides/back-to-work-childcare',
     title: 'Is It Worth Going Back to Work?',
     description:
       'The real financial calculation: income versus tax, reduced CCS, extra childcare days, and work costs. Three detailed worked examples.',
     readingTime: 12,
     category: 'planning',
+    live: false,
+  },
+  {
+    href: '/guides/childcare-types-compared',
+    title: 'Types of Childcare Compared',
+    description:
+      'Centre-based day care vs family day care vs OSHC vs in-home care — costs, pros and cons, and how CCS differs for each.',
+    readingTime: 7,
+    category: 'costs',
     live: false,
   },
   {
