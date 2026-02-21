@@ -1,0 +1,63 @@
+{
+  "financialYear": "2025-26",
+  "effectiveDate": "2025-07-01",
+  "source": "https://www.servicesaustralia.gov.au/child-care-subsidy and https://www.education.gov.au/early-childhood/child-care-subsidy",
+  "standardSubsidy": {
+    "maxSubsidyPercent": 90,
+    "baseIncomeThreshold": 85279,
+    "taperPer5000": 1,
+    "minSubsidyPercent": 0,
+    "_note": "CCS% = max(0, 90 - ceil((income - 85279) / 5000)) for income > 85279"
+  },
+  "higherSubsidy": {
+    "description": "Applies to each child other than the eldest child in approved care. The younger child's CCS rate is the greater of their standard rate OR the eldest child's rate + 30 percentage points (capped at 95%).",
+    "additionalPercentagePoints": 30,
+    "maxSubsidyPercent": 95,
+    "appliesTo": "All children except the eldest child currently in approved childcare"
+  },
+  "hourlyRateCaps": [
+    {
+      "careType": "centre_based_day_care",
+      "ageGroup": "below_school_age",
+      "ratePerHour": 14.63,
+      "_label": "Centre Based Day Care — children not yet at school"
+    },
+    {
+      "careType": "centre_based_day_care",
+      "ageGroup": "school_age",
+      "ratePerHour": 12.81,
+      "_label": "Centre Based Day Care — school-age children"
+    },
+    {
+      "careType": "family_day_care",
+      "ageGroup": "all",
+      "ratePerHour": 12.43,
+      "_label": "Family Day Care — all ages"
+    },
+    {
+      "careType": "outside_school_hours",
+      "ageGroup": "school_age",
+      "ratePerHour": 12.81,
+      "_label": "Outside School Hours Care — before/after school & vacation care"
+    },
+    {
+      "careType": "in_home_care",
+      "ageGroup": "all",
+      "ratePerHour": 35.40,
+      "_label": "In Home Care — per family (not per child)"
+    }
+  ],
+  "annualSubsidyCap": {
+    "incomeThreshold": 85279,
+    "capAmountPerChild": 11003,
+    "uncappedBelow": true,
+    "_note": "Families earning above $85,279 are subject to an annual CCS cap of $11,003 per child. Families earning $85,279 or below have no annual cap."
+  },
+  "threeDayGuarantee": {
+    "effectiveDate": "2026-01-05",
+    "minHoursPerFortnight": 72,
+    "description": "From 5 January 2026, all eligible families receive a minimum of 72 subsidised hours per fortnight regardless of their activity test result. This is the '3-Day Guarantee'."
+  },
+  "withholdingPercent": 5,
+  "_withholdingNote": "Services Australia withholds 5% of CCS each fortnight. The withheld amount is reconciled at end of financial year and refunded or used to offset any debt."
+}

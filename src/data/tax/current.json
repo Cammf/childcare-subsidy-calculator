@@ -1,0 +1,57 @@
+{
+  "financialYear": "2025-26",
+  "source": "https://www.ato.gov.au/tax-rates-and-codes/tax-rates-australian-residents",
+  "brackets": [
+    {
+      "min": 0,
+      "max": 18200,
+      "baseTax": 0,
+      "rate": 0,
+      "_label": "$0 – $18,200: tax-free threshold"
+    },
+    {
+      "min": 18201,
+      "max": 45000,
+      "baseTax": 0,
+      "rate": 0.16,
+      "_label": "$18,201 – $45,000: 16 cents for each $1 over $18,200 (revised Stage 3)"
+    },
+    {
+      "min": 45001,
+      "max": 135000,
+      "baseTax": 4288,
+      "rate": 0.30,
+      "_label": "$45,001 – $135,000: $4,288 plus 30 cents for each $1 over $45,000 (revised Stage 3)"
+    },
+    {
+      "min": 135001,
+      "max": 190000,
+      "baseTax": 31288,
+      "rate": 0.37,
+      "_label": "$135,001 – $190,000: $31,288 plus 37 cents for each $1 over $135,000"
+    },
+    {
+      "min": 190001,
+      "max": null,
+      "baseTax": 51638,
+      "rate": 0.45,
+      "_label": "$190,001+: $51,638 plus 45 cents for each $1 over $190,000"
+    }
+  ],
+  "medicareLevy": {
+    "rate": 0.02,
+    "lowIncomeThreshold": 26000,
+    "phaseInRate": 0.10,
+    "shadeInThreshold": 32500,
+    "_note": "Medicare levy is 2% of taxable income. Individuals earning below $26,000 pay no levy. Between $26,001 and $32,500 the levy phases in at 10 cents per dollar above $26,000. Above $32,500 full 2% applies."
+  },
+  "lito": {
+    "maxOffset": 700,
+    "fullOffsetTo": 37500,
+    "phaseOut1Rate": 0.05,
+    "phaseOut1To": 45000,
+    "phaseOut2Rate": 0.015,
+    "phaseOut2To": 66667,
+    "_note": "Low Income Tax Offset: $700 max for income ≤ $37,500. Reduces by 5 cents per dollar from $37,501 to $45,000 (to $325). Then reduces by 1.5 cents per dollar from $45,001 to $66,667 (to $0)."
+  }
+}

@@ -1,0 +1,90 @@
+[
+  {
+    "state": "ACT",
+    "stateName": "Australian Capital Territory",
+    "averageDailyFee": {
+      "centre_based_day_care": 175,
+      "family_day_care": 140,
+      "outside_school_hours": 55
+    },
+    "lastUpdated": "2025-07-01",
+    "source": "ABS / ACCC Childcare enquiry data, 2024-25"
+  },
+  {
+    "state": "NSW",
+    "stateName": "New South Wales",
+    "averageDailyFee": {
+      "centre_based_day_care": 158,
+      "family_day_care": 128,
+      "outside_school_hours": 50
+    },
+    "lastUpdated": "2025-07-01",
+    "source": "ABS / ACCC Childcare enquiry data, 2024-25"
+  },
+  {
+    "state": "VIC",
+    "stateName": "Victoria",
+    "averageDailyFee": {
+      "centre_based_day_care": 148,
+      "family_day_care": 122,
+      "outside_school_hours": 48
+    },
+    "lastUpdated": "2025-07-01",
+    "source": "ABS / ACCC Childcare enquiry data, 2024-25"
+  },
+  {
+    "state": "QLD",
+    "stateName": "Queensland",
+    "averageDailyFee": {
+      "centre_based_day_care": 142,
+      "family_day_care": 118,
+      "outside_school_hours": 45
+    },
+    "lastUpdated": "2025-07-01",
+    "source": "ABS / ACCC Childcare enquiry data, 2024-25"
+  },
+  {
+    "state": "SA",
+    "stateName": "South Australia",
+    "averageDailyFee": {
+      "centre_based_day_care": 130,
+      "family_day_care": 112,
+      "outside_school_hours": 43
+    },
+    "lastUpdated": "2025-07-01",
+    "source": "ABS / ACCC Childcare enquiry data, 2024-25"
+  },
+  {
+    "state": "WA",
+    "stateName": "Western Australia",
+    "averageDailyFee": {
+      "centre_based_day_care": 135,
+      "family_day_care": 115,
+      "outside_school_hours": 44
+    },
+    "lastUpdated": "2025-07-01",
+    "source": "ABS / ACCC Childcare enquiry data, 2024-25"
+  },
+  {
+    "state": "TAS",
+    "stateName": "Tasmania",
+    "averageDailyFee": {
+      "centre_based_day_care": 122,
+      "family_day_care": 108,
+      "outside_school_hours": 40
+    },
+    "lastUpdated": "2025-07-01",
+    "source": "ABS / ACCC Childcare enquiry data, 2024-25"
+  },
+  {
+    "state": "NT",
+    "stateName": "Northern Territory",
+    "averageDailyFee": {
+      "centre_based_day_care": 110,
+      "family_day_care": 100,
+      "outside_school_hours": 38
+    },
+    "lastUpdated": "2025-07-01",
+    "source": "ABS / ACCC Childcare enquiry data, 2024-25"
+  }
+]
