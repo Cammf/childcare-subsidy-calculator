@@ -56,7 +56,7 @@ const GUIDES: Guide[] = [
       'How the income thresholds and tapering formula work. Worked examples at key income levels plus common income sources people forget to include.',
     readingTime: 7,
     category: 'subsidy',
-    live: false,
+    live: true,
   },
   {
     href: '/guides/3-day-guarantee',
@@ -92,7 +92,7 @@ const GUIDES: Guide[] = [
       'The real financial calculation: income versus tax, reduced CCS, extra childcare days, and work costs. Three detailed worked examples.',
     readingTime: 12,
     category: 'planning',
-    live: false,
+    live: true,
   },
   {
     href: '/guides/childcare-types-compared',
