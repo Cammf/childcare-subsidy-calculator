@@ -149,7 +149,7 @@ function PeriodToggle({
     <div
       role="group"
       aria-label="View costs per period"
-      className="inline-flex rounded-lg border border-border overflow-hidden text-sm"
+      className="inline-flex rounded-lg border border-border overflow-hidden text-xs sm:text-sm"
     >
       {options.map((opt) => (
         <button
@@ -158,7 +158,7 @@ function PeriodToggle({
           onClick={() => onChange(opt.value)}
           aria-pressed={value === opt.value}
           className={[
-            'px-3 py-1.5 font-medium transition-colors duration-100',
+            'px-2 sm:px-3 py-1.5 font-medium transition-colors duration-100',
             value === opt.value
               ? 'bg-primary text-white'
               : 'bg-card text-muted hover:bg-gray-100 dark:hover:bg-slate-700 hover:text-text-main',
