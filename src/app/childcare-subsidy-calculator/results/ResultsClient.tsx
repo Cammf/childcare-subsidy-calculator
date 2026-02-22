@@ -27,6 +27,7 @@ import type { BackToWorkScenario, CurrentSituation } from '@/lib/backToWorkCalcu
 import type { IncomeSensitivityRow } from '@/lib/types';
 import type { IncomeSensitivityResult } from '@/lib/incomeSensitivity';
 import { formatDollars, formatDollarsAndCents, formatNumber } from '@/lib/format';
+import AdSlot from '@/components/guide/AdSlot';
 
 // ─── Types ────────────────────────────────────────────────────────────────────
 
@@ -2198,6 +2199,11 @@ function WhatThisActuallyMeans({
 
 function SharePanel({ output }: { output: CalculationOutput }) {
   const [copied, setCopied] = React.useState(false);
+  const [href, setHref] = React.useState('');
+
+  React.useEffect(() => {
+    setHref(window.location.href);
+  }, []);
 
   function handleCopy() {
     if (typeof window === 'undefined') return;
@@ -2285,7 +2291,7 @@ function SharePanel({ output }: { output: CalculationOutput }) {
         <p className="mt-3 text-xs text-muted truncate">
           <span className="font-medium">Your results link:</span>{' '}
           <span className="font-mono text-[11px] opacity-70 select-all">
-            {typeof window !== 'undefined' ? window.location.href : 'Loading…'}
+            {href || 'Loading…'}
           </span>
         </p>
       </div>
@@ -2723,6 +2729,11 @@ export default function ResultsClient({ output, relationshipStatus, restoreUrl }
         </div>
       </div>
 
+      {/* Leaderboard ad — top of results, desktop only */}
+      <div className="flex justify-center print:hidden">
+        <AdSlot size="leaderboard" />
+      </div>
+
       {/* ── Task 4.1 — Cost Summary Card ───────────────────────────────── */}
       <CostSummaryCard
         output={output}
@@ -2743,17 +2754,32 @@ export default function ResultsClient({ output, relationshipStatus, restoreUrl }
         <MultiChildComparisonPanel output={output} />
       )}
 
+      {/* Mid-content rectangle ad */}
+      <div className="flex justify-center print:hidden">
+        <AdSlot size="rectangle" />
+      </div>
+
       {/* ── Task 4.3 — Income Sensitivity Panel ──────────────────────── */}
       <IncomeSensitivityPanel output={output} />
 
       {/* ── Task 4.5 — Key Insights Accordion ──────────────────────────── */}
       <KeyInsightsAccordion output={output} />
 
+      {/* Sidebar-format rectangle ad (between key insights and next steps) */}
+      <div className="flex justify-center print:hidden">
+        <AdSlot size="rectangle" />
+      </div>
+
       {/* ── Task 4.7 — Next Steps Panel ──────────────────────────────── */}
       <NextStepsPanel output={output} />
 
       {/* ── Task 4.8 — Share Panel ───────────────────────────────────── */}
       <SharePanel output={output} />
+
+      {/* Bottom leaderboard ad */}
+      <div className="flex justify-center print:hidden">
+        <AdSlot size="leaderboard" />
+      </div>
 
       {/* ── Related guides ───────────────────────────────────────────── */}
       <section className="print:hidden" aria-labelledby="related-guides-heading">
