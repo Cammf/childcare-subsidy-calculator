@@ -206,10 +206,11 @@ export default function GuideLayout({
         )}
 
         {/* ── Main 66/33 layout ────────────────────────────────────────────── */}
-        <div className="lg:grid lg:grid-cols-[1fr_300px] lg:gap-10 items-start">
+        {/* items-start removed so right column stretches full height — required for sticky ToC */}
+        <div className="lg:grid lg:grid-cols-[1fr_300px] lg:gap-10">
 
           {/* Left column: article prose */}
-          <main>
+          <main className="self-start">
             <article className="prose-guide">
               {children}
             </article>

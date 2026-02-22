@@ -27,24 +27,25 @@ export default function GuideToc({ items }: Props) {
 
     if (headingEls.length === 0) return;
 
-    const observer = new IntersectionObserver(
-      (entries) => {
-        // Find the topmost intersecting heading
-        const visible = entries
-          .filter((e) => e.isIntersecting)
-          .sort((a, b) => a.boundingClientRect.top - b.boundingClientRect.top);
-        if (visible.length > 0) {
-          setActiveId(visible[0].target.id);
-        }
-      },
-      {
-        rootMargin: '0px 0px -60% 0px',
-        threshold: 0,
-      },
-    );
+    // Scroll-based active heading: highlight the last heading whose top
+    // edge has scrolled past the navbar + a small offset (120px).
+    const OFFSET = 120;
 
-    headingEls.forEach((el) => observer.observe(el));
-    return () => observer.disconnect();
+    const onScroll = () => {
+      const scrollY = window.scrollY;
+      let current = headingEls[0].id;
+      for (const el of headingEls) {
+        if (el.offsetTop - OFFSET <= scrollY) {
+          current = el.id;
+        }
+      }
+      setActiveId(current);
+    };
+
+    // Set initial state immediately
+    onScroll();
+    window.addEventListener('scroll', onScroll, { passive: true });
+    return () => window.removeEventListener('scroll', onScroll);
   }, [items]);
 
   if (items.length === 0) return null;
