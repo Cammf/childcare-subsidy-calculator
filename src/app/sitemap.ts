@@ -71,6 +71,18 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: 'monthly',
       priority: 0.8,
     },
+    {
+      url: `${SITE_URL}/guides/government-vs-private-childcare`,
+      lastModified: '2026-02-22',
+      changeFrequency: 'monthly',
+      priority: 0.8,
+    },
+    {
+      url: `${SITE_URL}/guides/childcare-subsidy-multiple-children`,
+      lastModified: '2026-02-22',
+      changeFrequency: 'monthly',
+      priority: 0.8,
+    },
 
     // ── Additional calculators ────────────────────────────────────────────────
     {

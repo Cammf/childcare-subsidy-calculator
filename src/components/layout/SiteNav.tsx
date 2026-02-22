@@ -33,6 +33,8 @@ const guideLinks = [
   { href: '/guides/3-day-guarantee', label: 'The 3-Day Guarantee (2026)' },
   { href: '/guides/back-to-work-childcare', label: 'Going Back to Work' },
   { href: '/guides/childcare-costs-by-state', label: 'Childcare Costs by State' },
+  { href: '/guides/government-vs-private-childcare', label: 'Government vs Private Childcare' },
+  { href: '/guides/childcare-subsidy-multiple-children', label: 'CCS for Multiple Children' },
 ];
 
 // ──────────────────────────────────────────────────────────────────────────────

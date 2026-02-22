@@ -83,7 +83,7 @@ const GUIDES: Guide[] = [
       'How the higher rate works for second and subsequent children aged 5 or under — and how much your family can save.',
     readingTime: 6,
     category: 'subsidy',
-    live: false,
+    live: true,
   },
   {
     href: '/guides/back-to-work-childcare',
@@ -119,7 +119,7 @@ const GUIDES: Guide[] = [
       "What the ACCC found: not-for-profit centres cost ~8% less. How to compare quality ratings (NQS) and whether fee levels affect CCS.",
     readingTime: 7,
     category: 'costs',
-    live: false,
+    live: true,
   },
 ];
 
