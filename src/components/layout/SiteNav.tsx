@@ -43,40 +43,70 @@ const guideLinks = [
 
 interface DropdownProps {
   label: string;
+  href?: string;
   isOpen: boolean;
   onToggle: () => void;
   onClose: () => void;
   children: React.ReactNode;
 }
 
-function Dropdown({ label, isOpen, onToggle, onClose, children }: DropdownProps) {
+function Dropdown({ label, href, isOpen, onToggle, onClose, children }: DropdownProps) {
+  const chevron = (
+    <svg
+      className={`w-4 h-4 transition-transform ${isOpen ? 'rotate-180' : ''}`}
+      fill="none"
+      viewBox="0 0 24 24"
+      stroke="currentColor"
+      strokeWidth={2}
+      aria-hidden="true"
+    >
+      <path strokeLinecap="round" strokeLinejoin="round" d="M19 9l-7 7-7-7" />
+    </svg>
+  );
+
   return (
-    <div className="relative">
-      <button
-        type="button"
-        onClick={onToggle}
-        onBlur={(e) => {
-          // Close if focus leaves the entire dropdown
-          if (!e.currentTarget.parentElement?.contains(e.relatedTarget as Node)) {
-            onClose();
-          }
-        }}
-        className="flex items-center gap-1 text-sm font-medium text-text-main hover:text-primary transition-colors min-h-[48px] px-2 focus:outline-none focus:text-primary"
-        aria-expanded={isOpen}
-        aria-haspopup="true"
-      >
-        {label}
-        <svg
-          className={`w-4 h-4 transition-transform ${isOpen ? 'rotate-180' : ''}`}
-          fill="none"
-          viewBox="0 0 24 24"
-          stroke="currentColor"
-          strokeWidth={2}
-          aria-hidden="true"
+    <div
+      className="relative flex items-center"
+      onBlur={(e) => {
+        if (!e.currentTarget.contains(e.relatedTarget as Node)) {
+          onClose();
+        }
+      }}
+    >
+      {href ? (
+        // Split: label navigates, chevron toggles dropdown
+        <>
+          <Link
+            href={href}
+            onClick={onClose}
+            className="text-sm font-medium text-text-main hover:text-primary transition-colors min-h-[48px] px-2 flex items-center focus:outline-none focus:text-primary"
+          >
+            {label}
+          </Link>
+          <button
+            type="button"
+            onClick={onToggle}
+            className="flex items-center text-text-main hover:text-primary transition-colors min-h-[48px] pr-2 focus:outline-none"
+            aria-expanded={isOpen}
+            aria-haspopup="true"
+            aria-label={`Show ${label} menu`}
+          >
+            {chevron}
+          </button>
+        </>
+      ) : (
+        // Combined button: whole thing toggles dropdown
+        <button
+          type="button"
+          onClick={onToggle}
+          className="flex items-center gap-1 text-sm font-medium text-text-main hover:text-primary transition-colors min-h-[48px] px-2 focus:outline-none focus:text-primary"
+          aria-expanded={isOpen}
+          aria-haspopup="true"
         >
-          <path strokeLinecap="round" strokeLinejoin="round" d="M19 9l-7 7-7-7" />
-        </svg>
-      </button>
+          {label}
+          {chevron}
+        </button>
+      )}
 
       {isOpen && (
         <div
@@ -162,10 +192,21 @@ export default function SiteNav() {
 
           <Dropdown
             label="Guides"
+            href="/guides"
             isOpen={openDropdown === 'guides'}
             onToggle={() => toggle('guides')}
             onClose={close}
           >
+            <Link
+              href="/guides"
+              role="menuitem"
+              onClick={close}
+              className={`block px-4 py-2.5 text-sm font-medium border-b border-border mb-1 hover:bg-teal-50 dark:hover:bg-teal-950 transition-colors ${
+                pathname === '/guides' ? 'text-primary' : 'text-text-main'
+              }`}
+            >
+              All guides →
+            </Link>
             {guideLinks.map((link) => (
               <Link
                 key={link.href}
@@ -240,6 +281,13 @@ export default function SiteNav() {
               </Link>
             ))}
             <p className="text-xs font-semibold uppercase tracking-wide text-muted mb-2 mt-4">Guides</p>
+            <Link
+              href="/guides"
+              onClick={() => setMobileMenuOpen(false)}
+              className="block py-2 text-sm font-medium text-primary hover:text-primary/80 border-b border-border mb-1"
+            >
+              All guides →
+            </Link>
             {guideLinks.map((link) => (
               <Link
                 key={link.href}
