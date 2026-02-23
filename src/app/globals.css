@@ -229,6 +229,21 @@
    Only takes effect when next-themes adds class="dark" to <html>.
    ============================================================================= */
 
+/* Primary TEXT colour — dark mode override
+   cyan-400 (#22D3EE) achieves ≥8.3:1 on card (#1E293B) and ≥12:1 on page bg (#0F172A) */
+.dark .text-primary { color: #22D3EE; }
+.dark .hover\:text-primary:hover { color: #22D3EE; }
+.dark .focus\:text-primary:focus { color: #22D3EE; }
+.dark .group:hover .group-hover\:text-primary { color: #22D3EE; }
+
+/* CTA buttons: text-primary on light backgrounds keeps original colour in dark mode
+   (inverted hero/CTA buttons use bg-white + dark:bg-slate-100 with text-primary) */
+.dark .text-primary.bg-white { color: #0E7490; }
+
+/* Prose guide links — hardcoded #0E7490 needs dark override */
+.dark .prose-guide a       { color: #22D3EE; }
+.dark .prose-guide a:hover { color: #67E8F9; }
+
 /* Page panels and alternating table rows — 4% white lift above bg-card (slate-800) */
 .dark .bg-gray-50 {
   background-color: rgba(255, 255, 255, 0.04);

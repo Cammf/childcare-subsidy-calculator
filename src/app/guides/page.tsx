@@ -135,9 +135,9 @@ export default function GuidesIndexPage() {
       <div className="bg-primary">
         <div className="max-w-5xl mx-auto px-4 sm:px-6 py-12">
           <nav aria-label="Breadcrumb" className="mb-4">
-            <ol className="flex items-center gap-1 text-sm text-teal-200">
+            <ol className="flex items-center gap-1 text-sm text-teal-100">
               <li><Link href="/" className="hover:text-white">Home</Link></li>
-              <li aria-hidden="true" className="text-teal-300">›</li>
+              <li aria-hidden="true" className="text-teal-100">›</li>
               <li className="text-white font-medium" aria-current="page">Guides</li>
             </ol>
           </nav>

@@ -128,7 +128,7 @@ export default function HomePage() {
       {/* ── HERO ────────────────────────────────────────────────────────────── */}
       <section className="bg-primary" aria-labelledby="hero-heading">
         <div className="max-w-3xl mx-auto px-4 py-16 text-center">
-          <p className="text-teal-200 text-sm font-medium mb-3 uppercase tracking-wide">
+          <p className="text-teal-100 text-sm font-medium mb-3 uppercase tracking-wide">
             FY 2025–26 rates · Free · No registration
           </p>
           <h1
@@ -160,7 +160,7 @@ export default function HomePage() {
             </Link>
           </div>
 
-          <p className="text-teal-300 text-xs mt-5">
+          <p className="text-teal-100 text-xs mt-5">
             Based on official Services Australia and education.gov.au rates · Not financial advice
           </p>
         </div>
